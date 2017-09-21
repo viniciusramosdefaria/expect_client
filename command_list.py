@@ -18,6 +18,12 @@ class Command:
         except Exception as e:
             print(e)
 
+    def interactive_mode(self):
+        try:
+            self.command_child.interact()
+        except Exception as e:
+            print(e)
+
     def exit_machine(self):
         self.command_child.sendline('exit')
 

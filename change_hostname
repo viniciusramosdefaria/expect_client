@@ -1,0 +1,3 @@
+name=ger-ol-app-hom02.network.ctbc
+echo $name > /etc/hostname
+sysctl -w kernel.hostname=$name

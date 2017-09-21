@@ -1,2 +1,6 @@
-ls
-ls
+sed -i -e 's/AllowTcpForwarding no/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
+sed -i -e 's/enabled = 1/enabled = 0/g' /etc/yum/pluginconf.d/rhnplugin.conf
+sed -i -e '/^distroverpkg=centos-release$/a proxy=http:\/\/127.0.0.1:8888' /etc/yum.conf
+mv /etc/yum.repos.d/OLD/* /etc/yum.repos.d/
+yum clean all
+systemctl restart sshd

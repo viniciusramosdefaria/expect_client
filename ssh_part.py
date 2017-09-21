@@ -19,18 +19,19 @@ class Connection:
             child = pexpect.spawn(spawn_string)
             fout = open('log.txt', 'wb')
             child.logfile_read = fout
+            child.setwinsize(400,400)
             i = child.expect(['.*]#', '.*assword:'])
 
-            time.sleep(1)
+            #time.sleep(1)
 
             if i == 0:
                 print('Connection to {} successful'.format(self.host))
             elif i == 1:
 
                 child.sendline(self.password)
-                time.sleep(1)
+                #time.sleep(1)
                 status = child.expect(['Permission .*', '.*\$'])
-                time.sleep(1)
+                #time.sleep(1)
 
                 if status == 0:
                     print('Permission denied on host. Can\'t login')
@@ -38,13 +39,13 @@ class Connection:
 
                 elif status == 1:
                     child.sendline('sudo su -')
-                    time.sleep(1)
+                    #time.sleep(1)
                     child.expect(['.*:.*'])
-                    time.sleep(1)
+                    #time.sleep(1)
                     child.sendline(self.password)
-                    time.sleep(1)
+                    #time.sleep(1)
                     child.expect('.*#.*')
-                    time.sleep(1)
+                    #time.sleep(1)
 
             return child
 

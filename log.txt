@@ -11,7 +11,8 @@
 |       e/ou criminais forem reveladas a partir deste, podera ser       |
 |       objeto de processo judicial e/ou criminal.                      |
 |_______________________________________________________________________|
-Last login: Tue Sep 12 10:25:12 2017
+Password: 
+Last login: Thu Sep 21 15:36:43 2017 from 10.12.138.29
  _______________________________________________________________________
 |  ***** Permitido o uso somente para pessoas autorizadas *****         |
 |                                                                       |
@@ -25,8 +26,11 @@ Last login: Tue Sep 12 10:25:12 2017
 |       e/ou criminais forem reveladas a partir deste, podera ser       |
 |       objeto de processo judicial e/ou criminal.                      |
 |_______________________________________________________________________|
-[root@pl4-lce-app-1 ~]# ls
-anaconda-ks.cfg  centos.gpgkey	extensions.conf  sip.conf
-[root@pl4-lce-app-1 ~]# ls
-anaconda-ks.cfg  centos.gpgkey	extensions.conf  sip.conf
-[root@pl4-lce-app-1 ~]# 
+[adminlocal@ger-ol-app-hom02 ~]$ sudo su -
+[sudo] password for adminlocal: 
+Last login: Thu Sep 21 15:36:43 -03 2017 on pts/0
+[root@ger-ol-app-hom02 ~]# 
+[root@ger-ol-app-hom02 ~]# 
+[root@ger-ol-app-hom02 ~]# 
+[root@ger-ol-app-hom02 ~]# logout
+[adminlocal@ger-ol-app-hom02 ~]$ sudo su -telnet servicos-hom.ocs.algartelecom.com.br 80[adminlocal@ger-ol-app-hom02 ~]$ sudo su -                                              

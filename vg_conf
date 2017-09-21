@@ -1,0 +1,7 @@
+sed -i -e '/^\/dev\/mapper\/VG00-var/a \/dev\/mapper\/VG01-lv_mongo    \/var\/lib\/mongodb   xfs     defaults        0 0' /etc/fstab
+lvcreate -l 100%FREE -n lv_mongo VG01
+mkfs.xfs /dev/mapper/VG01-lv_mongo
+umount -a
+mount -a
+cat /etc/fstab
+chown mongodb. /var/lib/mongodb
